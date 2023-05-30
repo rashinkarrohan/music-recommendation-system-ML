@@ -198,7 +198,7 @@ def gen_frames():  # generate frame by frame from camera
         if cv2.waitKey(1) == 27:
             break
 
-        time.sleep(1)
+        # time.sleep(1)
 
 
 @app.route('/video_feed')
