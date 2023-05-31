@@ -250,11 +250,11 @@ def home():
     return render_template('home.html', playlist=Recommended_playlist())
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         # Check if the user exists in the database
@@ -301,7 +301,7 @@ def register():
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
-    return redirect(url_for('index'))
+    return redirect(url_for('login'))
 
 
 
