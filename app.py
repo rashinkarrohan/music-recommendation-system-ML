@@ -190,6 +190,8 @@ def gen_frames():  # generate frame by frame from camera
 
             print(detected_emotions[0] + ' This is detected text ' + detected_emotions[1])
 
+            time.sleep(1)
+
         ret, buffer = cv2.imencode('.jpg', frame)
         
         frame = buffer.tobytes()
